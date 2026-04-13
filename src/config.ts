@@ -33,6 +33,64 @@ Do NOT use for hash generation -- use crypto_generate_hash instead. Do NOT use f
         },
         required: ["password"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "score": {
+              "type": "number",
+              "description": "Strength score 0-100"
+            },
+            "strength": {
+              "type": "string",
+              "description": "Strength label (weak/fair/good/strong/very strong)"
+            },
+            "entropy": {
+              "type": "number",
+              "description": "Entropy in bits"
+            },
+            "crackTime": {
+              "type": "string",
+              "description": "Estimated time to crack"
+            },
+            "isCommon": {
+              "type": "boolean",
+              "description": "Whether password is in common passwords list"
+            },
+            "length": {
+              "type": "number",
+              "description": "Password length"
+            },
+            "checks": {
+              "type": "object",
+              "properties": {
+                "hasLower": {
+                  "type": "boolean"
+                },
+                "hasUpper": {
+                  "type": "boolean"
+                },
+                "hasDigit": {
+                  "type": "boolean"
+                },
+                "hasSpecial": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "suggestions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Improvement suggestions"
+            }
+          },
+          "required": [
+            "score",
+            "strength",
+            "entropy"
+          ]
+        },
     },
   ],
 };
