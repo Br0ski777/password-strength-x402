@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "sse",
-      "url": "https://password-strength-x402-production.up.railway.app/mcp"
+      "url": "https://password-strength.api.klymax402.com/mcp"
     }
   ]
 }
