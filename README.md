@@ -37,7 +37,7 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `security_check_password` | POST | `/api/check` | $0.001 | Check password strength with entropy and crack time |
+| `security_check_password` | POST | `/api/check` | $0.003 | Check password strength with entropy and crack time |
 
 ### `security_check_password`
 
